@@ -5,8 +5,6 @@ preview: https://youtu.be/xIUzbpB0JMA
 
 
 # dependencies
-- qbcore/esx/qbox/standalone or even custom! (either one is fine)
-- ox_inventory or qb-inventory or even custom!
 - ox_lib (required)
 - oxmysql (required)
 
