@@ -1,0 +1,138 @@
+:root {
+    --cs-panel: rgba(12, 12, 16, 0.92);
+    --cs-border: rgba(255, 255, 255, 0.08);
+    --cs-text: #f2f2f5;
+    --cs-muted: rgba(255, 255, 255, 0.45);
+    --cs-track: rgba(255, 255, 255, 0.07);
+    --cs-accent: #9b5cff;
+    --cs-accent-dark: #7a2cff;
+    --cs-font: 'Inter', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    pointer-events: none;
+    font-family: var(--cs-font);
+}
+
+.hud {
+    position: fixed;
+    left: 50%;
+    top: 2vh;
+    bottom: auto;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.hud--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hud__panel {
+    min-width: 300px;
+    max-width: 360px;
+    background: var(--cs-panel);
+    border: 1px solid var(--cs-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hud__accent {
+    height: 2px;
+    background: linear-gradient(90deg, var(--cs-accent-dark), var(--cs-accent));
+}
+
+.hud__inner {
+    padding: 14px 16px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hud__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.hud__title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cs-muted);
+}
+
+.hud__fraction {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--cs-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.hud__main {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.hud__count {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--cs-text);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+}
+
+.hud__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cs-muted);
+}
+
+.hud__progress-track {
+    height: 4px;
+    background: var(--cs-track);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hud__progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--cs-accent-dark), var(--cs-accent));
+    border-radius: 999px;
+    transition: width 0.35s ease;
+}
+
+.hud__progress-text {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--cs-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hud,
+    .hud__progress-fill {
+        transition: none;
+    }
+}

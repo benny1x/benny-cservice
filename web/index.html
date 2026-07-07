@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>benny-cservice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div id="hud" class="hud hud--hidden" aria-live="polite">
+        <div class="hud__panel">
+            <div class="hud__accent"></div>
+            <div class="hud__inner">
+                <div class="hud__row">
+                    <span id="hud-title" class="hud__title">Community Service</span>
+                    <span id="hud-fraction" class="hud__fraction">0 / 0</span>
+                </div>
+                <div class="hud__main">
+                    <span id="hud-count" class="hud__count">0</span>
+                    <span id="hud-label" class="hud__label">tasks remaining</span>
+                </div>
+                <div class="hud__progress-track">
+                    <div id="hud-progress-fill" class="hud__progress-fill"></div>
+                </div>
+                <span id="hud-progress-text" class="hud__progress-text">0% complete</span>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
