@@ -7,7 +7,7 @@ preview: https://youtu.be/xIUzbpB0JMA
 # dependencies
 - ox_lib (required)
 - oxmysql (required)
-- benny-textui (optional)
+- benny-textui (optional) https://github.com/benny1x/benny-textui
 
 ## Configuration
 
